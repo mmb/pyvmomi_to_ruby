@@ -4,6 +4,6 @@ class OrList(list):
         return OrList(self.__add__(other))
 
     def __str__(self):
-        inner = ', '.join([ ':{} => true'.format(x) for x in self ])
+        inner = ', '.join([ ':{0} => true'.format(x) for x in self ])
 
-        return '{{{}}}'.format(inner)
+        return '{{{0}}}'.format(inner)

@@ -8,11 +8,11 @@ def format_value(v):
     elif type(v) is list or type(v) is tuple:
         return format_list(v)
     elif type(v) is int:
-        return '{}'.format(v)
+        return '{0}'.format(v)
     else:
-        return '"{}"'.format(v)
+        return '"{0}"'.format(v)
 
 def format_list(alist):
     inner = ', '.join([ format_value(v) for v in alist ])
 
-    return '[{}]'.format(inner)
+    return '[{0}]'.format(inner)

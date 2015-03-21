@@ -43,8 +43,8 @@ def AddVersion(a, b, c, d, e, out=sys.stdout):
     else:
         d = 'true'
 
-    out.write('    add_version("{}", "{}", "{}", {}, "{}")\n'.format(
+    out.write('    add_version("{0}", "{1}", "{2}", {3}, "{4}")\n'.format(
         a, b, c, d, e))
 
 def AddVersionParent(a, b, out=sys.stdout):
-    out.write('    add_version_parent("{}", "{}")\n'.format(a, b))
+    out.write('    add_version_parent("{0}", "{1}")\n'.format(a, b))
