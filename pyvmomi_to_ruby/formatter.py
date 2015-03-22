@@ -1,4 +1,4 @@
-import or_list
+from . import or_list
 
 def format_value(v):
     if v is None:
