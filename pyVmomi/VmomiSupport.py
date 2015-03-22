@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 import sys
 
 import pyvmomi_to_ruby.or_list

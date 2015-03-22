@@ -1,4 +1,4 @@
-from io import BytesIO as StringIO
+from io import StringIO
 
 import unittest
 
