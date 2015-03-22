@@ -16,3 +16,17 @@ def format_list(alist):
     inner = ', '.join([ format_value(v) for v in alist ])
 
     return '[{0}]'.format(inner)
+
+def format_data_type_fields(fields):
+    if fields is None:
+        result = None
+    else:
+        result = []
+
+        for field in fields:
+            new_field = list(field)
+            if new_field[-1] == 0:
+                new_field.pop()
+            result.append(new_field)
+
+    return result

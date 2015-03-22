@@ -10,18 +10,14 @@ F_LINKABLE = pyvmomi_to_ruby.or_list.OrList(['linkable'])
 F_OPTIONAL = pyvmomi_to_ruby.or_list.OrList(['optional'])
 
 def CreateDataType(a, b, c, d, e, out=sys.stdout):
-    if e is not None:
-        e = [ list(x) for x in e ]
-        for x in e:
-            if x[-1] == 0:
-                x.pop()
-
+    fields = pyvmomi_to_ruby.formatter.format_value(
+        pyvmomi_to_ruby.formatter.format_data_type_fields(e))
     out.write('    create_data_type("{a}", "{b}", "{c}", "{d}", {e})\n'.format(
         a=a,
         b=b,
         c=c,
         d=d,
-        e=pyvmomi_to_ruby.formatter.format_value(e)))
+        e=fields))
 
 def CreateManagedType(a, b, c, d, e, f, out=sys.stdout):
     out.write('    create_managed_type("{a}", "{b}", "{c}", "{d}", {e}, {f})\n'.format(
