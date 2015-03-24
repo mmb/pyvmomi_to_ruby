@@ -10,7 +10,7 @@ def format_value(v):
         return '{0}'.format(v)
 
 def remove_trailing_empty_hash(seq):
-    if type(seq) is list or type(seq) is tuple:
+    if (type(seq) is list or type(seq) is tuple) and seq:
         if seq[-1] == {}:
             return [ remove_trailing_empty_hash(child) for child in seq[:-1] ]
         else:

@@ -7,6 +7,9 @@ class TestRemoveTrailingEmptyHash(unittest.TestCase):
     def test_none(self):
         self.assertEqual(remove_trailing_empty_hash(None), None)
 
+    def test_empty_list(self):
+        self.assertEqual(remove_trailing_empty_hash([]), [])
+
     def test_one_layer_does_not_have(self):
         self.assertEqual(remove_trailing_empty_hash(['a']), ['a'])
 
