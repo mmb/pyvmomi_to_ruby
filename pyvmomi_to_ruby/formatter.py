@@ -2,16 +2,12 @@ def format_value(v):
     if v is None:
         return 'nil'
     elif type(v) is list or type(v) is tuple:
-        return format_list(v)
+        inner = ', '.join([ format_value(e) for e in v ])
+        return '[{0}]'.format(inner)
     elif type(v) is str:
         return '"{0}"'.format(v)
     else:
         return '{0}'.format(v)
-
-def format_list(alist):
-    inner = ', '.join([ format_value(v) for v in alist ])
-
-    return '[{0}]'.format(inner)
 
 def format_data_type_fields(fields):
     if fields is None:
