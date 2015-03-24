@@ -30,3 +30,11 @@ def format_data_type_fields(fields):
             result.append(new_field)
 
     return result
+
+def zero_to_empty_hash(seq):
+    if type(seq) is list or type(seq) is tuple:
+        return [ zero_to_empty_hash(child) for child in seq ]
+    elif seq == 0:
+        return {}
+    else:
+        return seq
