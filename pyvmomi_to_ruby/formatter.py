@@ -9,20 +9,6 @@ def format_value(v):
     else:
         return '{0}'.format(v)
 
-def format_data_type_fields(fields):
-    if fields is None:
-        result = None
-    else:
-        result = []
-
-        for field in fields:
-            new_field = list(field)
-            if new_field[-1] == 0:
-                new_field.pop()
-            result.append(new_field)
-
-    return result
-
 def remove_trailing_empty_hash(seq):
     if type(seq) is list or type(seq) is tuple:
         if seq[-1] == {}:
