@@ -1,6 +1,6 @@
 import unittest
 
-from pyVmomi_to_ruby.formatter import zero_to_empty_hash
+from pyvmomi_to_ruby.formatter import zero_to_empty_hash
 
 class TestZeroToEmptyHash(unittest.TestCase):
 
