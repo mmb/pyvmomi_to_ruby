@@ -20,6 +20,9 @@ def CreateDataType(a, b, c, d, e, out=sys.stdout):
         e=fields))
 
 def CreateManagedType(a, b, c, d, e, f, out=sys.stdout):
+    e=pyvmomi_to_ruby.formatter.zero_to_empty_hash(e)
+    f=pyvmomi_to_ruby.formatter.zero_to_empty_hash(f)
+
     out.write('    create_managed_type("{a}", "{b}", "{c}", "{d}", {e}, {f})\n'.format(
         a=a,
         b=b,
