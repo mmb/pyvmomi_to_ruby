@@ -23,6 +23,15 @@ def format_data_type_fields(fields):
 
     return result
 
+def remove_trailing_empty_hash(seq):
+    if type(seq) is list or type(seq) is tuple:
+        if seq[-1] == {}:
+            return [ remove_trailing_empty_hash(child) for child in seq[:-1] ]
+        else:
+            return [ remove_trailing_empty_hash(child) for child in seq ]
+    else:
+        return seq
+
 def zero_to_empty_hash(seq):
     if type(seq) is list or type(seq) is tuple:
         return [ zero_to_empty_hash(child) for child in seq ]
