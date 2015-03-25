@@ -7,4 +7,5 @@ Usage:
 
 ```
 ./gen_server_objects.sh
+./gen_core_types.sh
 ```
