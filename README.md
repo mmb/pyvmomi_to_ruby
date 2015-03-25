@@ -6,5 +6,5 @@ to a ruby version usable by [ruby_vim_sdk](https://github.com/cloudfoundry/bosh/
 Usage:
 
 ```
-./gen.sh
+./gen_server_objects.sh
 ```
